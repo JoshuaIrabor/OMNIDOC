@@ -33,24 +33,25 @@ axios (API calls)
 react-markdown (answer rendering)
 Project structure
 .
-├── backend/
-│   ├── services/
-│   │   ├── parser.py       # PDF / DOCX / TXT text extraction
-│   │   ├── chunker.py      # sentence-aware overlapping chunking
-│   │   ├── embedder.py     # OpenAI embeddings (batched)
-│   │   ├── retriever.py    # FAISS index + metadata + search
-│   │   └── generator.py    # grounded answer generation
-│   ├── api/                # FastAPI routes (upload / ask / documents)
-│   └── main.py             # app entrypoint
-├── data/
-│   └── faiss_index/        # persisted index + metadata (generated at runtime)
-├── frontend/
-│   └── src/
-│       ├── App.jsx
-│       └── App.css
-├── .env                    # not committed
-├── .gitignore
-└── README.md
+|--- backend/
+│   |-- services/
+│   |------parser.py       # PDF / DOCX / TXT text extraction
+│   │------chunker.py      # sentence-aware overlapping chunking
+│   │------embedder.py     # OpenAI embeddings (batched)
+│   │------retriever.py    # FAISS index + metadata + search
+│   │------generator.py    # grounded answer generation
+│   |-- api/               
+|   |------routes             # FastAPI routes (upload / ask / documents)
+│----main.py             # app entrypoint
+|    data/
+│        faiss_index/        # persisted index + metadata (generated at runtime)
+|--- frontend/
+│      src/
+│       |-- App.jsx
+│           App.css
+|--- .env                    # not committed
+|-- .gitignore
+|--- README.md
 
 Adjust paths to match your actual layout — this reflects the service-oriented structure the pipeline is organized around.
 
