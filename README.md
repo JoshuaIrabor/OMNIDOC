@@ -1,4 +1,4 @@
-Marginalia — Document Q&A
+OMNIDOC — Document Q&A
 
 A full-stack Retrieval-Augmented Generation (RAG) application that lets you upload documents and ask questions about them in natural language. Every answer is grounded in the passages actually retrieved from your files, rather than the model's general knowledge.
 
